@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\AndroidStudioProjects\meilan-android\home\.cxx\cmake\debug\x86'
+ninja: no work to do.

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="288dp"
+    android:layout_height="327dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_white_10">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_white"
+        app:hl_cornerRadius="56dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="4dp"
+        app:hl_shadowSymmetry="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center" />
+    </com.lihang.ShadowLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/line_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sl" />
+
+    <com.meilancycling.mema.customview.SensorTextView
+        android:id="@+id/stv_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black_3"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/view_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+    <TextView
+        android:id="@+id/tv_left_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:textColor="@color/black_9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/view_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="@string/current"
+        android:textColor="@color/black_3"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_line"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.meilancycling.mema.customview.SensorTextView
+        android:id="@+id/stv_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line"
+        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+    <TextView
+        android:id="@+id/tv_right_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:textColor="@color/black_9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line"
+        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="@string/warning_value"
+        android:textColor="@color/black_3"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

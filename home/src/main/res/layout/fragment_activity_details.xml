@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_person"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/activity_person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_person"
+            app:layout_constraintStart_toEndOf="@id/iv_person"
+            app:layout_constraintTop_toTopOf="@id/iv_person" />
+
+        <ImageView
+            android:id="@+id/iv_calendar"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/activity_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_person" />
+
+        <TextView
+            android:id="@+id/tv_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+            app:layout_constraintStart_toEndOf="@id/iv_calendar"
+            app:layout_constraintTop_toTopOf="@id/iv_calendar" />
+
+        <TextView
+            android:id="@+id/tv_activity_status"
+            android:layout_width="106dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.meilancycling.mema.ui.club.view.NewsDetailsBottomView
+            android:id="@+id/activity_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <WebView
+            android:id="@+id/activity_webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/activity_bottom"
+            app:layout_constraintTop_toBottomOf="@id/iv_calendar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

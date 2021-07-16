@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="167dp">
+
+                <ImageView
+                    android:id="@+id/iv_top_bg"
+                    android:layout_width="173dp"
+                    android:layout_height="107dp"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:id="@+id/iv_device"
+                    android:layout_width="77dp"
+                    android:layout_height="124dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="34dp" />
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+        <ImageView
+            android:id="@+id/iv_bottom_bg"
+            android:layout_width="184dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_connecting"
+            android:layout_width="14dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="118dp"
+            android:src="@drawable/ble_connecting"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_device_connecting"
+            app:layout_constraintTop_toBottomOf="@id/sl" />
+
+        <TextView
+            android:id="@+id/tv_device_connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/device_connecting"
+            android:textColor="@color/black_3"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_connecting"
+            app:layout_constraintLeft_toRightOf="@id/iv_connecting"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_connecting" />
+
+        <TextView
+            android:id="@+id/tv_connecting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip_connecting"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_connecting" />
+
+        <TextView
+            android:id="@+id/tv_delete_device"
+            android:layout_width="212dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="37dp"
+            android:background="@drawable/shape_line_99_23"
+            android:gravity="center"
+            android:text="@string/delete_device"
+            android:textColor="@color/delete_red"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

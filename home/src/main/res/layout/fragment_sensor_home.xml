@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="sensor_item1,sensor_item2,sensor_item3,sensor_item4,sensor_item5,sensor_item6,sensor_item7,sensor_item8,sensor_item9,sensor_item10" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintEnd_toStartOf="@id/guide_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/guide_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item1" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_center"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item2" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/guide_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item3" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_center"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item4" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/guide_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item5" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_center"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item6" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintEnd_toStartOf="@id/guide_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item7" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_item10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide_center"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_item8" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="sensor_single_item1,sensor_single_item2,sensor_single_item3,sensor_single_item4,sensor_single_item5,sensor_single_item6,sensor_single_item7,sensor_single_item8,sensor_single_item9,sensor_single_item10" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item1" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item2" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item3" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item4" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item5" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item6" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item7" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item8" />
+
+                <com.meilancycling.mema.ui.sensor.view.SensorItemView
+                    android:id="@+id/sensor_single_item10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sensor_single_item9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

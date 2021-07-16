@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/titleView_height"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <TextView
+            android:id="@+id/tv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_for"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/top_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/tv_common_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_common_title" />
+
+        <View
+            android:id="@+id/view_back"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/top_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_ble_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="view_ble_open,iv_search_device,tv_search_scanning,iv_device,view_device" />
+
+        <View
+            android:id="@+id/view_ble_open"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_main_23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+
+        <ImageView
+            android:id="@+id/iv_search_device"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/search_device"
+            app:layout_constraintBottom_toBottomOf="@id/view_ble_open"
+            app:layout_constraintStart_toStartOf="@id/view_ble_open"
+            app:layout_constraintTop_toTopOf="@id/view_ble_open" />
+
+        <TextView
+            android:id="@+id/tv_search_scanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:text="@string/scanning"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_ble_open"
+            app:layout_constraintStart_toEndOf="@id/iv_search_device"
+            app:layout_constraintTop_toTopOf="@id/view_ble_open" />
+
+        <View
+            android:id="@+id/view_device"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/shape_circle_white"
+            app:layout_constraintBottom_toBottomOf="@id/view_ble_open"
+            app:layout_constraintEnd_toEndOf="@id/view_ble_open"
+            app:layout_constraintTop_toTopOf="@id/view_ble_open" />
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="15dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_device"
+            app:layout_constraintEnd_toEndOf="@id/view_device"
+            app:layout_constraintStart_toStartOf="@id/view_device"
+            app:layout_constraintTop_toTopOf="@id/view_device" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_ble_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="view_ble_close,iv_ble_close,tv_ble_close" />
+
+        <View
+            android:id="@+id/view_ble_close"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_red_23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+
+        <ImageView
+            android:id="@+id/iv_ble_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="67dp"
+            android:src="@drawable/search_ble_close"
+            app:layout_constraintBottom_toBottomOf="@id/view_ble_close"
+            app:layout_constraintStart_toStartOf="@id/view_ble_close"
+            app:layout_constraintTop_toTopOf="@id/view_ble_close" />
+
+        <TextView
+            android:id="@+id/tv_ble_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:text="@string/search_ble_close"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_ble_close"
+            app:layout_constraintStart_toEndOf="@id/iv_ble_close"
+            app:layout_constraintTop_toTopOf="@id/view_ble_close" />
+
+        <TextView
+            android:id="@+id/tv_search_device"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_line_99_23"
+            android:gravity="center"
+            android:text="@string/scan"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_search_device"
+            app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

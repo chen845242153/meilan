@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "D:\\AndroidStudioProjects\\meilan-android\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "D:\\AndroidStudioProjects\\meilan-android\\home\\.cxx\\cmake\\debug\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "D:\\AndroidStudioProjects\\meilan-android\\home\\.cxx\\cmake\\debug\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "lib_ble-Debug-x86_64": {
+      "buildCommandComponents": [
+        "D:\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "D:\\AndroidStudioProjects\\meilan-android\\home\\.cxx\\cmake\\debug\\x86_64",
+        "lib_ble"
+      ],
+      "buildType": "debug",
+      "abi": "x86_64",
+      "artifactName": "lib_ble",
+      "output": "D:\\AndroidStudioProjects\\meilan-android\\home\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\liblib_ble.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

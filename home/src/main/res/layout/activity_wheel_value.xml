@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctv_wheel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/customize"
+                    android:textColor="@color/black_3"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_wheel_value"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edit_text_bottom"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="6"
+                    android:textColor="@color/black_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_wheel_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp"
+            app:layout_constraintTop_toBottomOf="@id/sl_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="9dp"
+                        android:text="@string/select"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wheel_left"
+                            android:textColor="@color/black_3"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wheel_right"
+                            android:textColor="@color/black_3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/arrow_wheel_bottom" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_weight="1"
+                        android:text="@string/select"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/arrow_more" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_value1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_value2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black_6"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/arrow_more" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_wheel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

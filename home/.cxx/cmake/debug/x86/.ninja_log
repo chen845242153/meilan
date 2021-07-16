@@ -1,0 +1,24 @@
+# ninja log v5
+34	300	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/sensorAPI.c.o	201e4bde746e9fda
+2	321	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/android_interface/lib_ble.c.o	2256c1a58d1be159
+240	517	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/config/sensorParametersConfig.c.o	baa3dc41d08c0ce2
+258	555	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/hrm/sensorHRM.c.o	23c14a86abc925d7
+517	731	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/gps/sensorGPS.c.o	a2b48a730d1a3673
+20	239	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/sensorTick.c.o	b62d533067fd8491
+901	1072	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fit.c.o	c4eb3b39a7332bd8
+69	543	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/sensorModule.c.o	884aceaa399c7c44
+321	529	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/csc/sensorCSC.c.o	fdea7334c6e2483d
+51	258	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensorCallback.c.o	15f94f03ab68a605
+1073	1241	648044787	../../../../build/intermediates/cmake/debug/obj/x86/liblib_ble.so	6dbf0ccc26430543
+529	716	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/environment/sensorEnvironment.c.o	e19c333dc9b78e61
+13	283	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/ios_interface/sensorCInputInterface.c.o	e223e925fb989255
+489	774	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/sensorBaseCalculateProcess.c.o	1d4701776d2494db
+284	489	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/csc/sensorSPD.c.o	828cd35fce6c8baa
+300	577	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/csc/sensorCAD.c.o	f907e6030bf41636
+543	820	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/common/power/sensorPower.c.o	e77eaaf04d189eb6
+717	968	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fit_activity.c.o	64a022b8c5de72e2
+577	978	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fileOperate.c.o	5ef11ff9a11ad522
+555	901	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/sensor/android_interface/androidOutputInterface.c.o	c2297ab1898a239a
+774	973	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fit_crc.c.o	77b106bc1c08d297
+731	1003	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fit_activity_encode.c.o	ad7ae65c8588421e
+820	1025	648044786	CMakeFiles/lib_ble.dir/home/src/main/jni/fit/fit_encode.c.o	8ba5ccb45859a992

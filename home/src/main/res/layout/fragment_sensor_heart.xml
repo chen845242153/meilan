@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="282dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                app:hl_cornerRadius="4dp"
+                app:hl_shadowColor="@color/shadow_color"
+                app:hl_shadowLimit="4dp"
+                app:hl_shadowOffsetY="2dp"
+                app:hl_shadowSymmetry="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="151dp"
+                        android:layout_marginEnd="9dp"
+                        android:background="@color/line_colors"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/current_heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.meilancycling.mema.customview.SensorTextView
+                        android:id="@+id/stv_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="65sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/view_line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/view_vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/line_colors"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/maximum_heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/view_vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+                    <com.meilancycling.mema.customview.SensorTextView
+                        android:id="@+id/stv_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="19dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="55sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/view_vertical"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/average_heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/view_vertical"
+                        app:layout_constraintTop_toTopOf="@id/view_line" />
+
+                    <com.meilancycling.mema.customview.SensorTextView
+                        android:id="@+id/stv_avg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="19dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="55sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/view_vertical" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                app:hl_cornerRadius="4dp"
+                app:hl_shadowColor="@color/shadow_color"
+                app:hl_shadowLimit="4dp"
+                app:hl_shadowOffsetY="2dp"
+                app:hl_shadowSymmetry="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/heart_rate_zone"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.meilancycling.mema.customview.HeartZoneProgressView
+                        android:id="@+id/heart_zone"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view_zone_5"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/shape_circle_b7"
+                        app:layout_constraintBottom_toTopOf="@id/view_zone_4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <View
+                        android:id="@+id/view_zone_4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="41dp"
+                        android:background="@drawable/shape_circle_ee"
+                        app:layout_constraintBottom_toTopOf="@id/view_zone_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_5" />
+
+                    <View
+                        android:id="@+id/view_zone_3"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="41dp"
+                        android:background="@drawable/shape_circle_main"
+                        app:layout_constraintBottom_toTopOf="@id/view_zone_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_4" />
+
+                    <View
+                        android:id="@+id/view_zone_2"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="41dp"
+                        android:background="@drawable/shape_circle_57"
+                        app:layout_constraintBottom_toTopOf="@id/view_zone_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_3" />
+
+                    <View
+                        android:id="@+id/view_zone_1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginBottom="35dp"
+                        android:background="@drawable/shape_circle_99"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/zone_5"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_5"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_5"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/zone_4"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_4"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_4"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/zone_3"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_3"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_3"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/zone_2"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_2"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_2"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/zone_1"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_1"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_1"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_1" />
+
+                    <TextView
+                        android:id="@+id/tv_zone_value_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_5"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_5" />
+
+                    <TextView
+                        android:id="@+id/tv_zone_value_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_4"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_4" />
+
+                    <TextView
+                        android:id="@+id/tv_zone_value_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_3"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_3" />
+
+                    <TextView
+                        android:id="@+id/tv_zone_value_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_2"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_2" />
+
+                    <TextView
+                        android:id="@+id/tv_zone_value_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_1"
+                        app:layout_constraintTop_toBottomOf="@id/view_zone_1" />
+
+                    <TextView
+                        android:id="@+id/tv_time_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="59dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_5"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_5"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_5" />
+
+                    <TextView
+                        android:id="@+id/tv_time_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="59dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_4"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_4"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_4" />
+
+                    <TextView
+                        android:id="@+id/tv_time_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="59dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_3"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_3"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_3" />
+
+                    <TextView
+                        android:id="@+id/tv_time_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="59dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_2"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_2"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_2" />
+
+                    <TextView
+                        android:id="@+id/tv_time_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="59dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_1"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_1"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_1" />
+
+
+                    <TextView
+                        android:id="@+id/tv_percent_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_5"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_5"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_5" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_4"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_4"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_4" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_3"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_3"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_3" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_2"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_2"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_2" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/view_zone_1"
+                        app:layout_constraintStart_toEndOf="@id/view_zone_1"
+                        app:layout_constraintTop_toTopOf="@id/view_zone_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.lihang.ShadowLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

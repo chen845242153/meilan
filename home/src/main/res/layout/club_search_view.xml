@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.ClubSearchModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/iv_search_news"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@{model.headFlag==1?@drawable/club_search_news:@drawable/club_search_activity}"
+            android:visibility="@{model.headFlag==0?View.GONE:View.VISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@{model.headFlag==1?@string/feed:@string/challenges}"
+            android:textColor="@color/black_6"
+            android:textSize="16sp"
+            android:visibility="@{model.headFlag==0?View.GONE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/iv_search_news"
+            app:layout_constraintStart_toEndOf="@id/iv_search_news"
+            app:layout_constraintTop_toTopOf="@id/iv_search_news" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            loadImageUrl="@{model.picturePath}"
+            android:layout_width="147dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_search_news" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:text="@{model.title}"
+            android:textColor="@color/black_3"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/iv_image"
+            app:layout_constraintTop_toTopOf="@id/iv_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="3dp"
+            android:text="@{model.date}"
+            android:textColor="@color/black_9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image"
+            app:layout_constraintStart_toEndOf="@id/iv_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@{model.contentType==1?@drawable/shape_main_activity:@drawable/shape_blue_activity}"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@{model.titleFlag}"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="@{model.searchType==1?View.GONE:View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="@id/iv_image"
+            app:layout_constraintTop_toTopOf="@id/iv_image"
+            tools:ignore="SmallSp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

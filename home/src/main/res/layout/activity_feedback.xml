@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar">
+
+        </include>
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/feedback_type"
+                    android:textColor="@color/black_3"
+                    android:textSize="15sp" />
+
+                <com.meilancycling.mema.ui.setting.view.FlowLayout
+                    android:id="@+id/fl_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_feedback_item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_main_4"
+                        android:paddingStart="9dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="9dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/feedback_item1"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_item2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_line_999_4"
+                        android:paddingStart="9dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="9dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/feedback_item2"
+                        android:textColor="@color/black_9" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_item3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_line_999_4"
+                        android:paddingStart="9dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="9dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/feedback_item3"
+                        android:textColor="@color/black_9" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_item4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_line_999_4"
+                        android:paddingStart="9dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="9dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/feedback_item4"
+                        android:textColor="@color/black_9" />
+                </com.meilancycling.mema.ui.setting.view.FlowLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/shape_line_dc_4">
+
+                    <EditText
+                        android:id="@+id/et_feedback_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="start"
+                        android:hint="@string/enter_questions"
+                        android:maxLength="500"
+                        android:paddingStart="11dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="11dp"
+                        android:paddingBottom="30dp"
+                        android:textColor="@color/black_3"
+                        android:textColorHint="@color/black_9"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_word_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/edit_length"
+                        android:textColor="@color/black_9"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_current_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toStartOf="@id/tv_feedback_word_count"
+                        android:textColor="@color/black_6"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="#FFE8E8E8" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/contact_details" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_email"
+                        android:textColor="@color/club_blue_color"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/shape_line_dc_4"
+                    android:gravity="center_vertical"
+                    android:hint="@string/input_contact_way"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_feedback_submit"
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/shape_f2_4"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="#FFB5B5B5" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

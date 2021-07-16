@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <View
+            android:id="@+id/view_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_lap"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/lap"
+            android:textColor="@color/black_3"
+            android:textSize="7sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/view_back"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view"
+            tools:ignore="SmallSp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_colors"
+            app:layout_constraintStart_toEndOf="@id/view_back"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_left"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/view_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lap" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rv_left"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/total_time_details"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/event_time"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/distance"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/average_speed"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/maximum_speed"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/average_cadence"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/maximum_cadence"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/highest_altitude"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/lowest_altitude"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/rise"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/decline"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/average_power"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/maximum_power"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/average_heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_15"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/maximum_heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/average_temperature"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/maximum_temperature"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/calories"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

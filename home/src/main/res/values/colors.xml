@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#ff000000</color>
+    <color name="line_colors">#E6E6E6</color>
+    <color name="black_3">#FF333333</color>
+    <color name="black_6">#666666</color>
+    <color name="black_9">#999999</color>
+    <color name="shadow_color">#80D6D6D6</color>
+
+    <color name="main_color">#FF6FB92C</color>
+    <color name="main_color_bg">#FFB7DC95</color>
+    <color name="blue_color">#FF5DA2C7</color>
+    <color name="blue_color_bg">#80589FC5</color>
+    <color name="orange_color">#FFEE8D1F</color>
+    <color name="orange_color_bg">#80EE8D1F</color>
+
+    <color name="yellow_color">#FFFFBB12</color>
+    <color name="color_f2">#FFF2F2F2</color>
+    <color name="delete_red">#FFB71010</color>
+    <color name="guide_bg">#99000000</color>
+
+    <color name="band_normal">#DCDCDC</color>
+    <color name="club_blue_color">#58A0C7</color>
+</resources>

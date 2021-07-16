@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="181dp"
+    android:layout_marginStart="47dp"
+    android:layout_marginEnd="47dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/edit_name"
+        android:textColor="@color/black_3"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="11dp"
+        android:background="@color/line_colors" />
+
+    <EditText
+        android:id="@+id/et_modify_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="50dp"
+        android:background="@null"
+        android:hint="@string/enter_name"
+        android:maxLength="25"
+        android:singleLine="true"
+        android:textColor="@color/black_3"
+        android:textColorHint="#FFD1D1D1"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:background="#FFD2D2D2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_finish"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:textColor="@color/main_color"
+        android:textSize="14sp" />
+</LinearLayout>

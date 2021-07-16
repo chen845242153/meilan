@@ -1,0 +1,6 @@
+<resources>
+    <!-- 按钮默认宽高 -->
+    <!-- 标题栏默认宽高 -->
+    <dimen name="titleView_height">44dp</dimen>
+    <dimen name="bottom_height">72dp</dimen>
+</resources>

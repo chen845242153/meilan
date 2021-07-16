@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_web"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors"
+            app:layout_constraintTop_toBottomOf="@id/ctv_web" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#f00"
+                android:scrollbars="none" />
+
+            <View
+                android:id="@+id/view_web"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_colors"
+                android:visibility="gone" />
+
+            <com.meilancycling.mema.customview.CommonBottomView
+                android:id="@+id/cbv_web"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_height"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="view_bg,iv_logo,iv_loading" />
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:src="@drawable/loading_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/loading_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

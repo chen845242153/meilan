@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.meilancycling.mema",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 20210708,
+      "versionName": "2.0.6",
+      "outputFile": "v2.0.6-20210716-release.apk"
+    }
+  ]
+}

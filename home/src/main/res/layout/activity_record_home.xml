@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height">
+
+            <LinearLayout
+                android:id="@+id/ll_record_home_back"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/back"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_record_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_record_type"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/iv_record_type"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/record_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_home"
+                    app:layout_constraintEnd_toEndOf="@id/iv_home"
+                    app:layout_constraintStart_toStartOf="@id/iv_home" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/record_home_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

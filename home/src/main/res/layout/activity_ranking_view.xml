@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.ActivityRankingItemModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="22dp"
+            android:src="@{model.ranking==0?@drawable/ranking_1:model.ranking==1?@drawable/ranking_2:@drawable/ranking_3}"
+            android:visibility="@{model.ranking>2?View.GONE:View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="@{String.valueOf(model.ranking+1)}"
+            android:textColor="@color/black_6"
+            android:textSize="13sp"
+            android:visibility="@{model.ranking>2?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            loadCircleUrl="@{model.userPath}"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="9dp"
+            android:text="@{model.userName}"
+            android:textColor="@color/black_3"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            loadImageUrl="@{model.countries}"
+            android:layout_width="20dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.getOdoValue(model.odo)}"
+            android:textColor="@color/black_3"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

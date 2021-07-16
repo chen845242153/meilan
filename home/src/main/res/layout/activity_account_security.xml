@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar" />
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors" />
+
+        <LinearLayout
+            android:id="@+id/ll_item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:id="@+id/tv_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_9"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/cancel_binding"
+                android:textColor="@color/main_color"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/item_arrow_right" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_account_cancel"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/account_cancel"
+                android:textColor="@color/black_3"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/item_arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="212dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="37dp"
+            android:background="@drawable/shape_line_99_23"
+            android:gravity="center"
+            android:text="@string/drop_out"
+            android:textColor="@color/delete_red" />
+
+    </LinearLayout>
+</layout>

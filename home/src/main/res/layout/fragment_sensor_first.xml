@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_item2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_title" />
+
+        <TextView
+            android:id="@+id/tv_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/app"
+            android:textColor="@color/club_blue_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/iv_sensor"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/sensor_change"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/tv_app"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_sensor_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/sensor"
+            android:textColor="@color/club_blue_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/iv_sensor"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <View
+            android:id="@+id/view_sensor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_sensor_end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_title" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="13dp"
+            android:src="@drawable/sensor_setting"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <View
+            android:id="@+id/view_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_setting"
+            app:layout_constraintEnd_toEndOf="@id/iv_setting"
+            app:layout_constraintStart_toStartOf="@id/iv_setting"
+            app:layout_constraintTop_toTopOf="@id/iv_setting" />
+
+        <ImageView
+            android:id="@+id/iv_sensor_type"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toStartOf="@id/iv_setting"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <View
+            android:id="@+id/view_sensor_type"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_sensor_type"
+            app:layout_constraintEnd_toEndOf="@id/iv_sensor_type"
+            app:layout_constraintStart_toStartOf="@id/iv_sensor_type"
+            app:layout_constraintTop_toTopOf="@id/iv_sensor_type" />
+
+        <View
+            android:id="@+id/view_item0"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_circle_99"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintEnd_toStartOf="@id/view_item1" />
+
+        <View
+            android:id="@+id/view_item1"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintEnd_toStartOf="@id/view_item2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view_item2"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_circle_main"
+            app:layout_constraintEnd_toStartOf="@id/view_item3"
+            app:layout_constraintStart_toEndOf="@id/view_item1"
+            app:layout_constraintTop_toTopOf="@id/view_item1" />
+
+        <View
+            android:id="@+id/view_item3"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/shape_circle_99"
+            app:layout_constraintEnd_toStartOf="@id/view_item4"
+            app:layout_constraintStart_toEndOf="@id/view_item2"
+            app:layout_constraintTop_toTopOf="@id/view_item1" />
+
+        <View
+            android:id="@+id/view_item4"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_circle_99"
+            app:layout_constraintEnd_toStartOf="@id/view_item5"
+            app:layout_constraintStart_toEndOf="@id/view_item3"
+            app:layout_constraintTop_toTopOf="@id/view_item1" />
+
+        <View
+            android:id="@+id/view_item5"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_item4"
+            app:layout_constraintTop_toTopOf="@id/view_item1" />
+
+        <View
+            android:id="@+id/view_item6"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_item4"
+            app:layout_constraintTop_toTopOf="@id/view_item1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors"
+            app:layout_constraintTop_toBottomOf="@id/view_title" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="view_sensor_setting,tv_sensor_speech
+            ,tb_sensor_speech,view_sensor_line,tv_sensor_screen,tb_sensor_screen,view_sensor_bottom" />
+
+        <View
+            android:id="@+id/view_sensor_setting"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:background="#FFF9F9F9"
+            app:layout_constraintTop_toBottomOf="@id/view_title" />
+
+
+        <TextView
+            android:id="@+id/tv_sensor_speech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/speech"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/view_sensor_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_sensor_setting" />
+
+        <ToggleButton
+            android:id="@+id/tb_sensor_speech"
+            android:layout_width="43dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/toggle_selector_common"
+            android:textOff="@null"
+            android:textOn="@null"
+            app:layout_constraintBottom_toTopOf="@id/view_sensor_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_sensor_setting" />
+
+        <View
+            android:id="@+id/view_sensor_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors"
+            app:layout_constraintBottom_toBottomOf="@id/view_sensor_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_sensor_setting" />
+
+        <TextView
+            android:id="@+id/tv_sensor_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/normally_screen"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/view_sensor_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_sensor_line" />
+
+        <ToggleButton
+            android:id="@+id/tb_sensor_screen"
+            android:layout_width="43dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/toggle_selector_common"
+            android:textOff="@null"
+            android:textOn="@null"
+            app:layout_constraintBottom_toTopOf="@id/view_sensor_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_sensor_setting" />
+
+        <View
+            android:id="@+id/view_sensor_bottom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors"
+            app:layout_constraintBottom_toBottomOf="@id/view_sensor_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/view_bottom"
+            app:layout_constraintTop_toBottomOf="@id/view_sensor_setting" />
+
+        <View
+            android:id="@+id/view_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors"
+            app:layout_constraintBottom_toTopOf="@id/sensor_bottom_view" />
+
+        <View
+            android:id="@+id/view_lock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/sensor_bottom_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.meilancycling.mema.ui.sensor.view.SensorBottomView
+            android:id="@+id/sensor_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_sensor_setting" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_sensor_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="view_guide_1,view_guide_2,view_guide_3,view_guide_4,view_guide_5,view_guide_6,view_guide_7" />
+
+        <View
+            android:id="@+id/view_guide_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg" />
+
+        <ImageView
+            android:id="@+id/view_guide_2"
+            android:layout_width="105dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/sensor_guide"
+            app:layout_constraintBottom_toBottomOf="@id/iv_sensor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_sensor" />
+
+        <TextView
+            android:id="@+id/view_guide_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/app"
+            android:textColor="@color/club_blue_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/view_guide_4"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/sensor_change"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/tv_app"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/view_guide_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/sensor"
+            android:textColor="@color/club_blue_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/iv_sensor"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <ImageView
+            android:id="@+id/view_guide_6"
+            android:layout_width="45dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/guide_sensor_arrow"
+            app:layout_constraintStart_toEndOf="@id/view_guide_2"
+            app:layout_constraintTop_toTopOf="@id/view_guide_2" />
+
+        <TextView
+            android:id="@+id/view_guide_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_main_7"
+            android:paddingStart="13dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="9dp"
+            android:text="@string/guide_sensor"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/view_guide_6"
+            app:layout_constraintStart_toStartOf="@id/view_guide_6"
+            app:layout_constraintTop_toBottomOf="@id/view_guide_6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

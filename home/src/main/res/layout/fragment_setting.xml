@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="14dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/tv_delete_device"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="15dp"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="4dp"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="167dp">
+
+                        <ImageView
+                            android:id="@+id/iv_device_bg"
+                            android:layout_width="173dp"
+                            android:layout_height="107dp"
+                            android:layout_alignParentEnd="true" />
+
+                        <ImageView
+                            android:id="@+id/iv_device"
+                            android:layout_width="77dp"
+                            android:layout_height="124dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginEnd="34dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="34dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.meilancycling.mema.ui.device.view.DevicePowerView
+                                android:id="@+id/dpv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tv_power"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="9dp"
+                                android:textColor="@color/black_3"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/tv_version"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="9dp"
+                                android:textColor="@color/black_3"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="75dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="14dp"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/ble_device" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text="@string/connected"
+                                android:textColor="@color/black_3"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_device_upgrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="33dp"
+                            android:background="@drawable/shape_blue_2"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="6dp"
+                                android:src="@drawable/device_upgrade" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="2dp"
+                                android:text="@string/update_available"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="22dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_progress"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="166dp"
+                                android:layout_height="5dp"
+                                android:progressDrawable="@drawable/layer_list_progress_drawable" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/data_uploading"
+                                android:textColor="@color/black_6"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="4dp"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sl_top">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.meilancycling.mema.ui.device.view.DeviceSettingItemView
+                            android:id="@+id/ds_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                        <View
+                            android:id="@+id/view_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginEnd="11dp"
+                            android:background="@color/line_colors" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="11dp"
+                                android:layout_weight="1"
+                                android:text="@string/time_format_setting"
+                                android:textColor="@color/black_3"
+                                android:textSize="14sp" />
+
+                            <ToggleButton
+                                android:id="@+id/tb_time_setting"
+                                android:layout_width="70dp"
+                                android:layout_height="22dp"
+                                android:layout_marginEnd="14dp"
+                                android:background="@drawable/toggle_selector_time"
+                                android:textOff="@null"
+                                android:textOn="@null" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginEnd="11dp"
+                            android:background="@color/line_colors" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_sound"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="11dp"
+                                android:layout_weight="1"
+                                android:text="@string/sound"
+                                android:textColor="@color/black_3"
+                                android:textSize="14sp" />
+
+                            <ToggleButton
+                                android:id="@+id/tb_device_setting_sound"
+                                android:layout_width="43dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="14dp"
+                                android:background="@drawable/toggle_selector_common"
+                                android:textOff="@null"
+                                android:textOn="@null" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="4dp"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sl_item1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.meilancycling.mema.ui.device.view.DeviceSettingItemView
+                            android:id="@+id/ds_odo"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                        <View
+                            android:id="@+id/view_odo"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginEnd="11dp"
+                            android:background="@color/line_colors" />
+
+                        <com.meilancycling.mema.ui.device.view.DeviceSettingItemView
+                            android:id="@+id/ds_altitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                        <View
+                            android:id="@+id/view_altitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginEnd="11dp"
+                            android:background="@color/line_colors" />
+
+                        <com.meilancycling.mema.ui.device.view.DeviceSettingItemView
+                            android:id="@+id/ds_sensor"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_item5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:hl_cornerRadius="19dp"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="4dp"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sl_item2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_information_reminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/incoming_call"
+                            android:textColor="@color/black_3"
+                            android:textSize="14sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb_information_reminder"
+                            android:layout_width="43dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="14dp"
+                            android:background="@drawable/toggle_selector_common"
+                            android:textOff="@null"
+                            android:textOn="@null" />
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_item4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:hl_cornerRadius="19dp"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="4dp"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sl_item5">
+
+                    <LinearLayout
+                        android:id="@+id/ll_delete_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/delete_device_history"
+                            android:textColor="@color/black_3"
+                            android:textSize="14sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb_delete_record"
+                            android:layout_width="43dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="14dp"
+                            android:background="@drawable/toggle_selector_common"
+                            android:textOff="@null"
+                            android:textOn="@null" />
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_delete_device"
+            android:layout_width="212dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/shape_line_99_23"
+            android:gravity="center"
+            android:text="@string/delete_device"
+            android:textColor="#FFB71010"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_m1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="guide_bg_m1,iv_guide_m1,tv_guide_m1_device,iv_guide_m1_arrow,tv_guide_m1" />
+
+        <View
+            android:id="@+id/guide_bg_m1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="460dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/guide_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m1_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="@string/sensor"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_m1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_m1" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m1_arrow"
+            android:layout_width="22dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/guide_device_arrow"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/shape_main_7"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/guide_device"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m1_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="guide_bg_m2,iv_guide_m2,tv_guide_m2_device,iv_guide_m2_arrow,tv_guide_m2" />
+
+        <View
+            android:id="@+id/guide_bg_m2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="368dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/guide_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m2_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="@string/sensor"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_m2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_m2" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m2_arrow"
+            android:layout_width="22dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/guide_device_arrow"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/shape_main_7"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/guide_device"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m2_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_m3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="guide_bg_m3,iv_guide_m3,tv_guide_m3_device,iv_guide_m3_arrow,tv_guide_m3" />
+
+        <View
+            android:id="@+id/guide_bg_m3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="255dp"
+            android:layout_marginEnd="17dp"
+            android:src="@drawable/guide_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m3_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="@string/sensor"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_m3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_m3" />
+
+        <ImageView
+            android:id="@+id/iv_guide_m3_arrow"
+            android:layout_width="22dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/guide_device_arrow"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_guide_m3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/shape_main_7"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/guide_device"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_m3_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

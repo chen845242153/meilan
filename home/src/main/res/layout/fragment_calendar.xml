@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.meilancycling.mema.customview.CalendarTopView
+                android:id="@+id/ctv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.meilancycling.mema.customview.CalendarTopView
+                android:id="@+id/ctv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.meilancycling.mema.customview.CalendarTopView
+                android:id="@+id/ctv_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.meilancycling.mema.customview.CalendarTopView
+                android:id="@+id/ctv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors">
+
+        </View>
+
+        <LinearLayout
+            android:id="@+id/ll_calendar_year"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_calendar_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/calendar_year_select" />
+        </LinearLayout>
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/mi_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+        </net.lucode.hackware.magicindicator.MagicIndicator>
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="18dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp">
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:calendar_match_parent="true"
+                app:current_day_text_color="@color/main_color"
+                app:day_text_size="13sp"
+                app:month_view="com.meilancycling.mema.customview.FullMonthView"
+                app:month_view_show_mode="mode_fix"
+                app:other_month_lunar_text_color="@color/white"
+                app:other_month_text_color="#FFC6C6C6"
+                app:week_background="@color/white"
+                app:week_start_with="sun"
+                app:week_text_color="@color/black_9" />
+
+        </com.lihang.ShadowLayout>
+    </LinearLayout>
+</layout>

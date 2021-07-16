@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Android P系统的设备上 java.net.UnknownServiceException: CLEARTEXT communication to XXXXXXX not permitted by network security policy
+        在Android P系统的设备上，如果应用使用的是非加密的明文流量的http网络请求，则会导致该应用无法进行网络请求，https则不会受影响，同样地，如果应用嵌套了webview，webview也只能使用https请求
+
+        针对这个问题，有以下三种解决方法：
+       （1）APP改用https请求
+       （2）targetSdkVersion 降到27以下
+       （3）更改网络安全配置：
+           1.在res文件夹下创建一个xml文件夹，然后创建一个network_security_config.xml文件，文件内容如下：
+           <?xml version="1.0" encoding="utf-8"?>
+           <network-security-config>
+               <base-config cleartextTrafficPermitted="true" />
+           </network-security-config>
+
+           2.接着，在AndroidManifest.xml文件下的application标签增加以下属性：
+           <application
+              ...
+              android:networkSecurityConfig="@xml/network_security_config"
+              ...
+           />
+        -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+

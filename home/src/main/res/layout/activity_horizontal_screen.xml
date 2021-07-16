@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_3"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintStart_toEndOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/chart_select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_select"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="33dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black_9"
+            android:textSize="6sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_item2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="33dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black_9"
+            android:textSize="6sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_item1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="54dp"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/sv_select"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/speed_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/speed"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cadence"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/cadence_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/cadence"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_cadence"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <LinearLayout
+                    android:id="@+id/ll_altitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/altitude_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/altitude"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_altitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <LinearLayout
+                    android:id="@+id/ll_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/hr_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/heart_rate"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <LinearLayout
+                    android:id="@+id/ll_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/power_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/power"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+                <LinearLayout
+                    android:id="@+id/ll_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="18dp"
+                        android:src="@drawable/temperature_chart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/temperature"
+                        android:textColor="@color/black_3"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/line_colors" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="guide_bg,iv_guide_open,iv_guide_close" />
+
+        <View
+            android:id="@+id/guide_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg" />
+
+        <ImageView
+            android:id="@+id/iv_guide_open"
+            android:layout_width="52dp"
+            android:layout_height="56dp"
+            android:src="@drawable/guide_chart_open"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_guide_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_guide_close"
+            android:layout_width="52dp"
+            android:layout_height="56dp"
+            android:src="@drawable/guide_chart_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_guide_open"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

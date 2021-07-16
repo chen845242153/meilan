@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.ActivityItemModel" />
+    </data>
+
+    <com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="7dp"
+        app:hl_cornerRadius="13dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowHiddenTop="true"
+        app:hl_shadowLimit="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv"
+                loadImageUrl="@{model.pictureUrl}"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:layout_marginStart="1px"
+                android:layout_marginEnd="1px"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginEnd="1px"
+                android:background="@{model.isOfficial(model.activityType)?@drawable/shape_main_activity:@drawable/shape_blue_activity}"
+                android:paddingStart="5dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="1dp"
+                android:text="@{model.activityTitle}"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/club_top"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{model.activityName}"
+                android:textColor="@color/black_3"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv" />
+
+            <ImageView
+                android:id="@+id/iv_calendar"
+                android:layout_width="13dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/calendar"
+                app:layout_constraintEnd_toStartOf="@id/tv_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.activityTime}"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_calendar"
+                app:layout_constraintTop_toTopOf="@id/iv_calendar" />
+
+            <TextView
+                android:layout_width="82dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@{model.getStatusDraw(model.activityStatus)}"
+                android:gravity="center"
+                android:text="@{model.getStatusName(model.activityStatus)}"
+                android:textColor="@{model.activityStatus==1?@color/main_color:model.activityStatus==2?@color/club_blue_color:@color/black_9}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.lihang.ShadowLayout>
+
+</layout>

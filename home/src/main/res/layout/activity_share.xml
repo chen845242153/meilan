@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar" />
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_activity_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_f2" />
+
+        <LinearLayout
+            android:id="@+id/ll_strava"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/setting_strava" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strava"
+                    android:textColor="@color/black_3"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strava_not"
+                    android:textColor="@color/black_6"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_strava_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/item_arrow_right" />
+
+            <ImageView
+                android:id="@+id/iv_strava_select"
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/share_select" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_f2" />
+
+        <LinearLayout
+
+            android:id="@+id/ll_komoot"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/share_kom" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/komoot"
+                    android:textColor="@color/black_3"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/komoot_not"
+                    android:textColor="@color/black_6"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_komoot_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/item_arrow_right" />
+
+            <ImageView
+                android:id="@+id/iv_komoot_select"
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/share_select" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_f2" />
+
+        <LinearLayout
+            android:id="@+id/ll_tp"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/share_tp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="@string/training"
+                android:textColor="@color/black_3"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_tp_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/item_arrow_right" />
+
+            <ImageView
+                android:id="@+id/iv_tp_select"
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/share_select" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_f2" />
+    </LinearLayout>
+</layout>

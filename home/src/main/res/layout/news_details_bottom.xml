@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.NewsBottomModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            loadCircleUrl="@{model.avatarUrl}"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_f7_16"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/new_comment"
+            android:textColor="@color/black_9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="33dp"
+            android:src="@{model.isLike?@drawable/liked:@drawable/like}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_main_7"
+            android:paddingStart="5dp"
+            android:paddingTop="1px"
+            android:paddingEnd="5dp"
+            android:paddingBottom="1px"
+            android:text="@{String.valueOf(model.likeNumber)}"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:visibility="@{model.likeNumber==0?View.GONE:View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
+
+        <View
+            android:id="@+id/view_like"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

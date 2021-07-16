@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:hl_cornerRadius="23dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="312dp"
+                android:orientation="vertical">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/mi_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_colors" />
+
+                <FrameLayout
+                    android:id="@+id/fl_record_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_record_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

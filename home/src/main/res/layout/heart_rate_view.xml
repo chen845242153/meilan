@@ -1,0 +1,123 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="4dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="4dp"
+        app:hl_shadowOffsetY="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="152dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/heart_rate_zone"
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.meilancycling.mema.customview.HeartZoneProgressView
+                    android:id="@+id/heart_zone"
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.meilancycling.mema.customview.IntervalView
+                    android:id="@+id/iv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp" />
+
+                <TextView
+                    android:id="@+id/tv_hr_value1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text=">171"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+
+                <com.meilancycling.mema.customview.IntervalView
+                    android:id="@+id/iv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_hr_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="153-171"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+
+                <com.meilancycling.mema.customview.IntervalView
+                    android:id="@+id/iv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_hr_value3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="134-152"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+
+                <com.meilancycling.mema.customview.IntervalView
+                    android:id="@+id/iv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_hr_value4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="115-133"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+
+                <com.meilancycling.mema.customview.IntervalView
+                    android:id="@+id/iv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_hr_value5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="96-114"
+                    android:textColor="@color/black_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+</layout>

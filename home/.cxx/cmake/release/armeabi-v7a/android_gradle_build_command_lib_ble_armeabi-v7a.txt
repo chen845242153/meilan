@@ -1,0 +1,7 @@
+Executable : D:\Android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\AndroidStudioProjects\meilan-android\home\.cxx\cmake\release\armeabi-v7a
+lib_ble
+jvmArgs : 
+

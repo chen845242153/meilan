@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.RankingModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@{model.itemSelect==0?@drawable/shape_ranking_left_select:@drawable/shape_ranking_left}"
+            android:gravity="center"
+            android:text="@string/ranking_left"
+            android:textColor="@{model.itemSelect==0?@color/white:@color/black_6}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_central"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_central"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:background="@{model.itemSelect==1?@drawable/shape_ranking_centre_select:@drawable/shape_ranking_centre}"
+            android:gravity="center"
+            android:text="@string/ranking_central"
+            android:textColor="@{model.itemSelect==1?@color/white:@color/black_6}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_left"
+            app:layout_constraintEnd_toStartOf="@id/tv_right"
+            app:layout_constraintStart_toEndOf="@id/tv_left"
+            app:layout_constraintTop_toTopOf="@id/tv_left" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="15dp"
+            android:background="@{model.itemSelect==2?@drawable/shape_ranking_right_select:@drawable/shape_ranking_right}"
+            android:gravity="center"
+            android:text="@string/ranking_right"
+            android:textColor="@{model.itemSelect==2?@color/white:@color/black_6}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_central"
+            app:layout_constraintTop_toTopOf="@id/tv_left" />
+
+        <ImageView
+            android:id="@+id/iv_ranking"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/ranking_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_left" />
+
+        <TextView
+            android:id="@+id/tv_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/ranking_leader_board"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ranking"
+            app:layout_constraintStart_toEndOf="@id/iv_ranking"
+            app:layout_constraintTop_toTopOf="@id/iv_ranking" />
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{model.ranking}"
+            android:textColor="@color/black_3"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ranking"
+            app:layout_constraintStart_toEndOf="@id/tv_ranking"
+            app:layout_constraintTop_toTopOf="@id/iv_ranking" />
+
+        <ImageView
+            android:id="@+id/iv_grade"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ranking_grade"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ranking"
+            app:layout_constraintEnd_toStartOf="@id/tv_grade"
+            app:layout_constraintTop_toTopOf="@id/iv_ranking" />
+
+        <TextView
+            android:id="@+id/tv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="108dp"
+            android:text="@string/ranking_grade"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ranking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_ranking" />
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{model.grade}"
+            android:textColor="@color/black_3"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ranking"
+            app:layout_constraintStart_toEndOf="@id/tv_grade"
+            app:layout_constraintTop_toTopOf="@id/iv_ranking" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_ranking" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

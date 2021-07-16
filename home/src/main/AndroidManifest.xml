@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.meilancycling.mema">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/logo_main"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo_main"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup"
+        tools:targetApi="q">
+        <activity android:name=".ui.record.FitManagerActivity"></activity>
+        <activity android:name=".ui.device.SelectDeviceActivity" />
+        <activity android:name=".ui.club.ActivityRankingActivity" />
+        <activity android:name=".ui.club.SignUpActivity" />
+        <activity android:name=".ui.club.ActivityDetailsActivity" />
+        <activity android:name=".ui.club.ClubSearchActivity" />
+        <activity android:name=".ui.club.CommentListActivity" />
+        <activity android:name=".ui.club.NewsDetailsActivity" />
+        <activity
+            android:name=".ui.details.LapDetailsActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.details.HorizontalScreenActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.setting.EmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sensor.SensorChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.ChooseCountryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.UnbindingEmailActivity"
+            android:screenOrientation="portrait" /> <!-- 微信登录 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" /> <!-- qq登录 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1109515481" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider2455828518037558"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="@string/fb_login_protocol_scheme"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.sensor.WheelValueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sensor.AddSensorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sensor.SensorListStatusActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.SensorControllerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.sensor.SensorHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.SelectFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.CompetitionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.BindingEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.PerfectInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.ActivityShareActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="www.meilancycling.com"
+                    android:scheme="meilan" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.FileUploadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.ScanSensorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.AddRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.FavoritesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.ModifyNickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.CommonProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.setting.HelpCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.AccountSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.DeviceManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.SensorListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.WarningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.PowerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.HeartActivity"
+            android:screenOrientation="portrait" /> <!-- qq分享实例 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.record.ShareImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.PersonalShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.details.MapLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.DeviceSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.RecordHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.SelectMonthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.record.SelectDayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.details.DetailsHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.details.DescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.details.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.details.MyTakePhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.SearchDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.RecordService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaProjection" />
+<!--        <service-->
+<!--            android:name=".service.DeviceControllerService"-->
+<!--            android:excludeFromRecents="true" />-->
+
+        <activity
+            android:name=".service.NotificationActivity"
+            android:label="DFU" />
+
+        <service
+            android:name=".service.DfuService"
+            android:exported="true"
+            android:label="@string/dfu_service_title">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.MyNotificationService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".service.MyFileProvider"
+            android:authorities="com.meilancycling.mema.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:hl_cornerRadius="23dp"
+    app:hl_shadowColor="@color/shadow_color"
+    app:hl_shadowLimit="4dp"
+    app:hl_shadowOffsetY="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp">
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="28dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="81dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/black_3"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/arrow_device_manager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.meilancycling.mema.ui.device.view.DevicePowerView
+            android:id="@+id/dpv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="81dp"
+            android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textColor="@color/black_6"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/dpv"
+            app:layout_constraintStart_toEndOf="@id/dpv"
+            app:layout_constraintTop_toTopOf="@id/dpv" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:text="@string/update_available"
+            android:textColor="@color/main_color"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/dpv"
+            app:layout_constraintStart_toEndOf="@id/tv_power"
+            app:layout_constraintTop_toTopOf="@id/dpv" />
+
+        <ImageView
+            android:id="@+id/iv_connecting"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="81dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/device_connecting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="@string/connecting"
+            android:textColor="@color/black_9"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_connecting"
+            app:layout_constraintStart_toEndOf="@id/iv_connecting"
+            app:layout_constraintTop_toTopOf="@id/iv_connecting" />
+
+        <TextView
+            android:id="@+id/tv_continue_upgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_blue_2"
+            android:gravity="center"
+            android:paddingStart="9dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="3dp"
+            android:text="@string/continue_upgrade"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ble_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="81dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/not_connected"
+            android:textColor="@color/black_9"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.lihang.ShadowLayout>

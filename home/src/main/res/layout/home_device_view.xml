@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.home.DeviceModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:hl_cornerRadius="23dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@{model.productNo==null?@drawable/shape_device_23:@drawable/shape_white_23}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:progress="@{model.power>60?(100-model.power):model.power}"
+                android:progressDrawable="@{model.getPowerDraw(model.power)}"
+                android:visibility="@{model.isShowPower(model.productNo,model.deviceStatus,model.bleStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                emptyToGone="@{model.productNo}"
+                loadDevice="@{model.productNo}"
+                android:layout_width="37dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                emptyToGone="@{model.productNo}"
+                loadDeviceName="@{model.productNo}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="12dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/ble_close"
+                android:visibility="@{model.isShowBleStatus(model.productNo,model.bleStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/ble_close"
+                android:textColor="@color/delete_red"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowBleStatus(model.productNo,model.bleStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_1"
+                app:layout_constraintStart_toEndOf="@id/iv_1"
+                app:layout_constraintTop_toTopOf="@id/iv_1" />
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/empty_power"
+                android:visibility="@{model.isShowLowPower(model.productNo,model.deviceStatus,model.power)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/battery_low"
+                android:textColor="@color/delete_red"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowLowPower(model.productNo,model.deviceStatus,model.power)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_2"
+                app:layout_constraintStart_toEndOf="@id/iv_2"
+                app:layout_constraintTop_toTopOf="@id/iv_2" />
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/device_connecting"
+                android:visibility="@{model.isShowConnecting(model.productNo,model.bleStatus,model.deviceStatus,model.updateStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/connecting"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowConnecting(model.productNo,model.bleStatus,model.deviceStatus,model.updateStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_3"
+                app:layout_constraintStart_toEndOf="@id/iv_3"
+                app:layout_constraintTop_toTopOf="@id/iv_3" />
+
+            <ImageView
+                android:id="@+id/iv_4"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/connected"
+                android:visibility="@{model.isShowConnected(model.productNo,model.bleStatus,model.deviceStatus,model.progress,model.power)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/connected"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowConnected(model.productNo,model.bleStatus,model.deviceStatus,model.progress,model.power)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_4"
+                app:layout_constraintStart_toEndOf="@id/iv_4"
+                app:layout_constraintTop_toTopOf="@id/iv_4" />
+
+            <ImageView
+                android:id="@+id/iv_5"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/device_upload"
+                android:visibility="@{model.isShowUpload(model.productNo,model.deviceStatus,model.progress)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/data_uploading"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowUpload(model.productNo,model.deviceStatus,model.progress)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_5"
+                app:layout_constraintStart_toEndOf="@id/iv_5"
+                app:layout_constraintTop_toTopOf="@id/iv_5" />
+
+            <ProgressBar
+                android:id="@+id/pb_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="11dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:progress="@{model.progress}"
+                android:progressDrawable="@drawable/data_progress_drawable"
+                android:visibility="@{model.isShowUpload(model.productNo,model.deviceStatus,model.progress)?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_5" />
+
+            <ImageView
+                android:id="@+id/iv_6"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/upgrade_incomplete"
+                android:visibility="@{model.isShowUpgradeIncomplete(model.productNo,model.bleStatus,model.deviceStatus,model.updateStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/upgrade_incomplete"
+                android:textColor="#FFBD2320"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowUpgradeIncomplete(model.productNo,model.bleStatus,model.deviceStatus,model.updateStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_6"
+                app:layout_constraintStart_toEndOf="@id/iv_6"
+                app:layout_constraintTop_toTopOf="@id/iv_6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/data_uploading"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:visibility="@{model.isShowUpload(model.productNo,model.deviceStatus,model.updateStatus)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/iv_5"
+                app:layout_constraintStart_toEndOf="@id/iv_5"
+                app:layout_constraintTop_toTopOf="@id/iv_5" />
+
+
+            <TextView
+                android:id="@+id/tv_device"
+                emptyToGone="@{model.productNo}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/my_device"
+                android:textColor="@color/blue_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                emptyToGone="@{model.productNo}"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/blue_color"
+                app:layout_constraintBottom_toBottomOf="@id/tv_device"
+                app:layout_constraintEnd_toEndOf="@id/tv_device"
+                app:layout_constraintStart_toStartOf="@id/tv_device" />
+
+            <View
+                android:id="@+id/view_my_device"
+                emptyToGone="@{model.productNo}"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_device"
+                app:layout_constraintEnd_toEndOf="@id/tv_device"
+                app:layout_constraintStart_toStartOf="@id/tv_device"
+                app:layout_constraintTop_toTopOf="@id/tv_device" />
+
+            <ImageView
+                android:id="@+id/iv_add"
+                emptyToVisible="@{model.productNo}"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/add_device"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_add"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                emptyToVisible="@{model.productNo}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/add_device"
+                android:textColor="@color/main_color"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_add"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.lihang.ShadowLayout>
+</layout>

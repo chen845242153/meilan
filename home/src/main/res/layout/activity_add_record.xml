@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/fake_status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/titleView_height" />
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_activity"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_f2_4"
+            android:gravity="center"
+            android:text="@string/upload"
+            android:textColor="#FFB5B5B5"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <View
+            android:id="@+id/view_save"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fake_status_bar_view" />
+
+        <View
+            android:id="@id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <ImageView
+            android:id="@+id/iv_item1"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/add_item1_select"
+            app:layout_constraintEnd_toStartOf="@id/iv_item2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+        <ImageView
+            android:id="@+id/iv_item2"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/add_item2"
+            app:layout_constraintEnd_toStartOf="@id/iv_item3"
+            app:layout_constraintStart_toEndOf="@id/iv_item1"
+            app:layout_constraintTop_toTopOf="@id/iv_item1" />
+
+        <ImageView
+            android:id="@+id/iv_item3"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/add_item3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_item2"
+            app:layout_constraintTop_toTopOf="@id/iv_item2" />
+
+        <View
+            android:id="@+id/view_empty"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:background="#FFDCDCDC"
+            app:layout_constraintBottom_toTopOf="@id/view_progress"
+            app:layout_constraintEnd_toEndOf="@id/view_progress"
+            app:layout_constraintStart_toStartOf="@id/iv_upload"
+            app:layout_constraintTop_toTopOf="@id/iv_upload" />
+
+        <View
+            android:id="@+id/view_progress"
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_marginBottom="1dp"
+            android:background="@color/main_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/iv_upload"
+            app:layout_constraintEnd_toEndOf="@id/iv_upload"
+            app:layout_constraintStart_toStartOf="@id/iv_upload"
+            app:layout_constraintTop_toBottomOf="@id/view_empty" />
+
+        <ImageView
+            android:id="@+id/iv_upload"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/add_record_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_item1" />
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_text_bottom"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/black_3"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_upload" />
+
+        <TextView
+            android:id="@+id/tv_select_file"
+            android:layout_width="212dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shape_main_23"
+            android:gravity="center"
+            android:text="@string/select_file"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_upload" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/support_fit"
+            android:textColor="@color/black_9"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_select_file" />
+
+        <ImageView
+            android:id="@+id/iv_add_fit"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="63dp"
+            android:src="@drawable/add_fit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_add_fit"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_add_fit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/file_management"
+            android:textColor="@color/club_blue_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_add_fit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_add_fit"
+            app:layout_constraintTop_toTopOf="@id/iv_add_fit" />
+
+        <View
+            android:id="@+id/view_add_fit"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_add_fit"
+            app:layout_constraintEnd_toEndOf="@id/tv_add_fit"
+            app:layout_constraintStart_toStartOf="@id/iv_add_fit"
+            app:layout_constraintTop_toTopOf="@id/iv_add_fit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

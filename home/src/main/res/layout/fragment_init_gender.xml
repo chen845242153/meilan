@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center_horizontal"
+            android:text="@string/init_gender"
+            android:textColor="@color/black_3"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="46dp"
+            android:src="@drawable/init_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <View
+
+            android:id="@+id/view_bg"
+            android:layout_width="193dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="91dp"
+            android:background="@drawable/shape_white_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_title" />
+
+        <TextView
+            android:id="@+id/tv_item1"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:background="@drawable/shape_main_40"
+            android:gravity="center"
+            android:text="@string/man"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_bg"
+            app:layout_constraintEnd_toStartOf="@id/tv_item2"
+            app:layout_constraintStart_toStartOf="@id/view_bg"
+            app:layout_constraintTop_toTopOf="@id/view_bg" />
+
+        <TextView
+            android:id="@+id/tv_item2"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:gravity="center"
+            android:text="@string/woman"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_bg"
+            app:layout_constraintEnd_toEndOf="@id/view_bg"
+            app:layout_constraintStart_toEndOf="@id/tv_item1"
+            app:layout_constraintTop_toTopOf="@id/view_bg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

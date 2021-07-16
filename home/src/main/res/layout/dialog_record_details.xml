@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="10dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="4dp"
+        app:hl_shadowOffsetY="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:textColor="@color/black_3"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_colors" />
+
+            <TextView
+                android:id="@+id/tv_edit_record"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/edit_record"
+                android:textColor="@color/black_3"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_colors" />
+
+            <TextView
+                android:id="@+id/tv_strava"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/strava_share"
+                android:textColor="@color/black_3"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_colors" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="#FFB71010"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="10dp"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="4dp"
+        app:hl_shadowOffsetY="2dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black_9"
+            android:textSize="17sp" />
+    </com.lihang.ShadowLayout>
+</LinearLayout>

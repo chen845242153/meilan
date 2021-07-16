@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="57dp"
+    android:layout_marginEnd="57dp">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        android:background="@drawable/shape_white_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/goal_setting"
+        android:textColor="@color/black_6"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg" />
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/search_close"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg" />
+
+    <View
+        android:id="@+id/iv_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg" />
+
+    <com.meilancycling.mema.ui.home.view.HomeTargetProgress
+        android:id="@+id/htp"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <com.meilancycling.mema.customview.CusFntTextView
+        android:id="@+id/ctv"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:gravity="center"
+        android:textColor="@color/color_f2"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@id/htp"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/htp" />
+
+    <com.meilancycling.mema.customview.NoPaddingTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:textColor="@color/black_3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/view_bg"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@id/view_bg"
+        app:layout_constraintRight_toLeftOf="@id/tv_unit" />
+
+    <com.meilancycling.mema.customview.NoPaddingTextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="@id/view_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

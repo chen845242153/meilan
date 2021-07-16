@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_guide_content"
+            android:layout_width="0dp"
+            android:layout_height="235dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="13dp"
+            android:src="@drawable/guide_details_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp">
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_cadence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_altitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_heart_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.CustomChartView
+                    android:id="@+id/ccv_chart_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.SlopeView
+                    android:id="@+id/sv_slope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.HeartRateChartView
+                    android:id="@+id/hr_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="298dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+
+                <com.meilancycling.mema.customview.PowerChartView
+                    android:id="@+id/power_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="412dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="15dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="guide_bg,guide_content,guide_bg_bottom,iv_guide_content,iv_guide,guide_bg_left,guide_bg_right" />
+
+        <View
+            android:id="@+id/guide_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/guide_bg"
+            app:layout_constraintBottom_toTopOf="@id/iv_guide_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/guide_bg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/guide_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_guide_content" />
+
+        <View
+            android:id="@+id/guide_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_content"
+            app:layout_constraintEnd_toEndOf="@id/iv_guide_content"
+            app:layout_constraintStart_toStartOf="@id/iv_guide_content"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_content" />
+
+        <View
+            android:id="@+id/guide_bg_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/guide_bg"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_content"
+            app:layout_constraintEnd_toStartOf="@id/iv_guide_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_content" />
+
+        <View
+            android:id="@+id/guide_bg_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/guide_bg"
+            app:layout_constraintBottom_toBottomOf="@id/iv_guide_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_guide_content"
+            app:layout_constraintTop_toTopOf="@id/iv_guide_content" />
+
+        <ImageView
+            android:id="@+id/iv_guide"
+            android:layout_width="72dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/guide_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_guide_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

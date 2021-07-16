@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.RankingTopModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="226dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/shape_circle_ranking_2"
+            app:layout_constraintEnd_toStartOf="@id/view_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="91dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/shape_circle_ranking_1"
+            app:layout_constraintEnd_toStartOf="@id/view_3"
+            app:layout_constraintStart_toEndOf="@id/view_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_3"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/shape_circle_ranking_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            loadCircleUrl="@{model.url1}"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/view_1"
+            app:layout_constraintEnd_toEndOf="@id/view_1"
+            app:layout_constraintStart_toStartOf="@id/view_1"
+            app:layout_constraintTop_toTopOf="@id/view_1" />
+
+        <ImageView
+            android:id="@+id/iv_nationalFlag1"
+            loadImageUrl="@{model.nationalFlag1}"
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_1"
+            app:layout_constraintEnd_toEndOf="@id/view_1"
+            app:layout_constraintStart_toStartOf="@id/view_1"
+            app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="@{model.name1}"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ctv_value1"
+            app:layout_constraintEnd_toEndOf="@id/view_1"
+            app:layout_constraintStart_toStartOf="@id/view_1" />
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:id="@+id/ctv_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@{model.value1}"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/view_1"
+            app:layout_constraintStart_toStartOf="@id/view_1" />
+
+
+        <ImageView
+            loadCircleUrl="@{model.url2}"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/view_2"
+            app:layout_constraintEnd_toEndOf="@id/view_2"
+            app:layout_constraintStart_toStartOf="@id/view_2"
+            app:layout_constraintTop_toTopOf="@id/view_2" />
+
+        <ImageView
+            android:id="@+id/iv_nationalFlag2"
+            loadImageUrl="@{model.nationalFlag2}"
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_2"
+            app:layout_constraintEnd_toEndOf="@id/view_2"
+            app:layout_constraintStart_toStartOf="@id/view_2"
+            app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="@{model.name2}"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ctv_value2"
+            app:layout_constraintEnd_toEndOf="@id/view_2"
+            app:layout_constraintStart_toStartOf="@id/view_2" />
+
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:id="@+id/ctv_value2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="115dp"
+            android:text="@{model.value2}"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/view_2"
+            app:layout_constraintStart_toStartOf="@id/view_2"
+            app:layout_constraintTop_toTopOf="@id/ctv_value1" />
+
+
+        <ImageView
+            loadCircleUrl="@{model.url3}"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/view_3"
+            app:layout_constraintEnd_toEndOf="@id/view_3"
+            app:layout_constraintStart_toStartOf="@id/view_3"
+            app:layout_constraintTop_toTopOf="@id/view_3" />
+
+        <ImageView
+            android:id="@+id/iv_nationalFlag3"
+            loadImageUrl="@{model.nationalFlag3}"
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/view_3"
+            app:layout_constraintEnd_toEndOf="@id/view_3"
+            app:layout_constraintStart_toStartOf="@id/view_3"
+            app:layout_constraintTop_toBottomOf="@id/view_3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text="@{model.name3}"
+            android:textColor="@color/black_3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ctv_value3"
+            app:layout_constraintEnd_toEndOf="@id/view_3"
+            app:layout_constraintStart_toStartOf="@id/view_3" />
+
+        <com.meilancycling.mema.customview.CusFntTextView
+            android:id="@+id/ctv_value3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="57dp"
+            android:text="@{model.value3}"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/view_3"
+            app:layout_constraintStart_toStartOf="@id/view_3"
+            app:layout_constraintTop_toTopOf="@id/ctv_value1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

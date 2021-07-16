@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_exercise_type"
+                        android:layout_width="21dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_details_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black_6"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="horizontal">
+
+                    <com.meilancycling.mema.customview.CusFntTextView
+                        android:id="@+id/ctv_details_total_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_3"
+                        android:textSize="49sp" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <com.meilancycling.mema.customview.DetailsTopView
+                    android:id="@+id/dtv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp" />
+
+                <com.meilancycling.mema.customview.DetailsTopFourView
+                    android:id="@+id/fv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp">
+
+                    <com.mapbox.mapboxsdk.maps.MapView
+                        android:id="@+id/mv_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        mapbox:mapbox_uiLogo="false" />
+
+                    <View
+                        android:id="@+id/view_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_play_map"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/map_play" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_line_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#FFDDDDDD" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/lap"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/time"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/distance"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/average_speed"
+                        android:textColor="@color/black_3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mrv_lap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            mapbox:constraint_referenced_ids="tv_guide_map,iv_guide_arrow,iv_guide_details,ll_guide_type" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            mapbox:constraint_referenced_ids="iv_guide_1,iv_1,view_guide_1" />
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/guide_bg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_guide_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="45dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/record_guide_arrow"
+            mapbox:layout_constraintStart_toEndOf="@id/iv_guide_1"
+            mapbox:layout_constraintTop_toTopOf="@id/iv_guide_1" />
+
+        <TextView
+            android:id="@+id/view_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_main_7"
+            android:paddingStart="13dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="9dp"
+            android:text="@string/change_type"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="13dp"
+            mapbox:layout_constraintStart_toStartOf="@id/iv_guide_1"
+            mapbox:layout_constraintTop_toBottomOf="@id/iv_1" />
+
+        <TextView
+            android:id="@+id/tv_guide_map"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/shape_main_7"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/guide_map"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_guide_arrow"
+            android:layout_width="22dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/guide_details_arrow"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toBottomOf="@id/tv_guide_map" />
+
+        <ImageView
+            android:id="@+id/iv_guide_details"
+            android:layout_width="0dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/guide_details_map"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toBottomOf="@id/iv_guide_arrow" />
+
+        <LinearLayout
+            android:id="@+id/ll_guide_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            mapbox:layout_constraintTop_toTopOf="@id/iv_guide_details">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/lap"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/distance"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/average_speed"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

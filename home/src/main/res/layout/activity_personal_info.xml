@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar" />
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_personal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors" />
+
+        <LinearLayout
+            android:id="@+id/ll_personal_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@string/avatar"
+                android:textColor="@color/black_3"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="49dp"
+                android:layout_height="49dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/item_arrow_right" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_gender"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_height"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_body_weight"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+
+        <com.meilancycling.mema.ui.user.UserItemView
+            android:id="@+id/uiv_area"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/line_colors" />
+    </LinearLayout>
+</layout>

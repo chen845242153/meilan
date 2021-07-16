@@ -1,0 +1,133 @@
+[
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\android_interface\\lib_ble.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\android_interface\\lib_ble.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/android_interface/lib_ble.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\ios_interface\\sensorCInputInterface.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\ios_interface\\sensorCInputInterface.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/ios_interface/sensorCInputInterface.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\sensorTick.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\sensorTick.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/sensorTick.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\sensorAPI.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\sensorAPI.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/sensorAPI.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensorCallback.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensorCallback.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensorCallback.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\sensorModule.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\sensorModule.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/sensorModule.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\config\\sensorParametersConfig.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\config\\sensorParametersConfig.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/config/sensorParametersConfig.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\hrm\\sensorHRM.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\hrm\\sensorHRM.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/hrm/sensorHRM.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorSPD.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorSPD.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/csc/sensorSPD.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorCAD.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorCAD.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/csc/sensorCAD.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorCSC.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\csc\\sensorCSC.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/csc/sensorCSC.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\sensorBaseCalculateProcess.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\sensorBaseCalculateProcess.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/sensorBaseCalculateProcess.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\gps\\sensorGPS.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\gps\\sensorGPS.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/gps/sensorGPS.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\environment\\sensorEnvironment.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\environment\\sensorEnvironment.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/environment/sensorEnvironment.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\common\\power\\sensorPower.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\common\\power\\sensorPower.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/common/power/sensorPower.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\sensor\\android_interface\\androidOutputInterface.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\sensor\\android_interface\\androidOutputInterface.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/sensor/android_interface/androidOutputInterface.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fileOperate.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fileOperate.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fileOperate.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fit_activity.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fit_activity.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fit_activity.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fit_activity_encode.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fit_activity_encode.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fit_activity_encode.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fit_crc.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fit_crc.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fit_crc.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fit_encode.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fit_encode.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fit_encode.c"
+},
+
+{
+  "directory": "D:/AndroidStudioProjects/meilan-android/home/.cxx/cmake/debug/arm64-v8a",
+  "command": "D:\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dlib_ble_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\lib_ble.dir\\home\\src\\main\\jni\\fit\\fit.c.o   -c D:\\AndroidStudioProjects\\meilan-android\\home\\src\\main\\jni\\fit\\fit.c",
+  "file": "D:/AndroidStudioProjects/meilan-android/home/src/main/jni/fit/fit.c"
+}
+]

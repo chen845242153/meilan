@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height">
+
+            <LinearLayout
+                android:id="@+id/ll_heart_back"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/back">
+
+                </ImageView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/heart_rate_zone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_heart_reset"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical|end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/reset"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_colors" />
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rl_heart_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <View
+                            android:id="@+id/view_max"
+                            android:layout_width="0dp"
+                            android:layout_height="4dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@color/main_color"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_heart_max"
+                            app:layout_constraintEnd_toEndOf="@id/tv_heart_max"
+                            app:layout_constraintStart_toStartOf="@id/tv_heart_max" />
+
+                        <View
+                            android:id="@+id/view_reserve"
+                            android:layout_width="0dp"
+                            android:layout_height="4dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@color/main_color"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_heart_reserve"
+                            app:layout_constraintEnd_toEndOf="@id/tv_heart_reserve"
+                            app:layout_constraintStart_toStartOf="@id/tv_heart_reserve" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/calculation"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_heart_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/maximum_heart_rate"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_heart_reserve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/heart_reserve"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/line_colors" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/heart_max"
+                            android:textColor="@color/black_6"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_heart_max_value"
+                            android:layout_width="38dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/shape_line_main"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/heart_unit"
+                            android:textColor="@color/black_6"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tv_resting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/resting_heart"
+                            android:textColor="@color/black_6"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_heart_resting_value"
+                            android:layout_width="38dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="3dp"
+                            android:background="@drawable/shape_line_main"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_resting_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/heart_unit"
+                            android:textColor="@color/black_6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="78dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="@string/zone_1"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_heart_zone_1"
+                            android:gravity="center"
+                            android:text="@string/heart_rate_zone_1_value"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_value_1"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_line_999_4"
+                            android:gravity="center" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/line_colors" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="81dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/zone_2"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_heart_zone_2"
+                            android:gravity="center"
+                            android:text="@string/heart_rate_zone_2_value"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_value_2"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_line_999_4"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="46dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/symbol"
+                            android:textColor="@color/black_3" />
+
+                        <TextView
+                            android:id="@+id/tv_value_end_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black_3" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/line_colors" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="81dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/zone_3"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_heart_zone_3"
+                            android:gravity="center"
+                            android:text="@string/heart_rate_zone_3_value"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_value_3"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_line_999_4"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="46dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/symbol"
+                            android:textColor="@color/black_3" />
+
+                        <TextView
+                            android:id="@+id/tv_value_end_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black_3" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/line_colors" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="81dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/zone_4"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_heart_zone_4"
+                            android:gravity="center"
+                            android:text="@string/heart_rate_zone_4_value"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_value_4"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_line_999_4"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="46dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/symbol"
+                            android:textColor="@color/black_3" />
+
+                        <TextView
+                            android:id="@+id/tv_value_end_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black_3" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/line_colors" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="81dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/zone_5"
+                            android:textColor="@color/black_3"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_heart_zone_5"
+                            android:gravity="center"
+                            android:text="@string/heart_rate_zone_5_value"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_value_5"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/shape_line_999_4"
+                            android:gravity="center" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </com.lihang.ShadowLayout>
+    </LinearLayout>
+</layout>

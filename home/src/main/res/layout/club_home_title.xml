@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.meilancycling.mema.ui.club.model.ClubHomeTitleModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/main_color"
+            android:visibility="@{model.itemSelect==0?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_feed"
+            app:layout_constraintStart_toStartOf="@id/tv_feed" />
+
+        <TextView
+           
+            android:id="@+id/tv_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="@string/feed"
+            android:textColor="@{model.itemSelect==0?@color/black_3:@color/black_6}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_challenges"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/main_color"
+            android:visibility="@{model.itemSelect==1?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_challenges"
+            app:layout_constraintStart_toStartOf="@id/tv_challenges" />
+
+        <TextView
+            android:id="@+id/tv_challenges"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/challenges"
+            android:textColor="@{model.itemSelect==1?@color/black_3:@color/black_6}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_feed"
+            app:layout_constraintEnd_toStartOf="@id/tv_leader_board"
+            app:layout_constraintStart_toEndOf="@id/tv_feed"
+            app:layout_constraintTop_toTopOf="@id/tv_feed" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/main_color"
+            android:visibility="@{model.itemSelect==2?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_leader_board"
+            app:layout_constraintStart_toStartOf="@id/tv_leader_board" />
+
+        <TextView
+            android:id="@+id/tv_leader_board"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/leader_board"
+            android:textColor="@{model.itemSelect==2?@color/black_3:@color/black_6}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_feed"
+            app:layout_constraintEnd_toStartOf="@id/view_search"
+            app:layout_constraintStart_toEndOf="@id/tv_challenges"
+            app:layout_constraintTop_toTopOf="@id/tv_feed" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_circle_red"
+            android:visibility="@{model.showRedPoint?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintStart_toEndOf="@id/tv_challenges"
+            app:layout_constraintTop_toTopOf="@id/tv_challenges" />
+
+        <View
+            android:visibility="@{model.itemSelect==2?View.INVISIBLE:View.VISIBLE}"
+            android:id="@+id/view_search"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:visibility="@{model.itemSelect==2?View.INVISIBLE:View.VISIBLE}"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/club_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

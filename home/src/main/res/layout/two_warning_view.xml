@@ -1,0 +1,71 @@
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black_3"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/warning_min"
+                android:textColor="@color/black_3"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/tb_switch_min"
+                android:layout_width="32dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/toggle_selector_common"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/warning_max"
+                android:textColor="@color/black_3"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/tb_switch_max"
+                android:layout_width="32dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="11dp"
+                android:background="@drawable/toggle_selector_common"
+                android:textOff="@null"
+                android:textOn="@null" />
+        </LinearLayout>
+
+        <com.meilancycling.mema.ui.setting.view.TwoWarningProgressView
+            android:id="@+id/tpv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="87dp" />
+
+    </RelativeLayout>
+</layout>

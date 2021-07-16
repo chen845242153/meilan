@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_status_bar"/>
+
+
+        <com.meilancycling.mema.customview.CommonTitleView
+            android:id="@+id/ctv_device_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleView_height" />
+
+        <LinearLayout
+            android:id="@+id/ll_ble_close"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_red_23"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/search_ble_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="@string/search_ble_close"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                android:id="@+id/srv_device_manage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_no_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                app:hl_cornerRadius="4dp"
+                app:hl_shadowColor="@color/shadow_color"
+                app:hl_shadowLimit="4dp"
+                app:hl_shadowOffsetY="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="22dp"
+                        android:src="@drawable/no_device" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/no_device"
+                        android:textColor="@color/black_6"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+
+
+        </RelativeLayout>
+
+        <com.meilancycling.mema.customview.CommonBottomView
+            android:id="@+id/cbv_device_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_height" />
+    </LinearLayout>
+</layout>

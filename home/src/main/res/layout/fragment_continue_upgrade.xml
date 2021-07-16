@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            app:hl_cornerRadius="4dp"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="4dp"
+            app:hl_shadowOffsetY="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="167dp">
+
+                <ImageView
+                    android:id="@+id/iv_top_bg"
+                    android:layout_width="173dp"
+                    android:layout_height="107dp"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:id="@+id/iv_device"
+                    android:layout_width="77dp"
+                    android:layout_height="124dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="34dp" />
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+        <ImageView
+            android:id="@+id/iv_bottom_bg"
+            android:layout_width="184dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/upgrading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="duv,iv_ble_status,tv_ble_status,iv_status,tv_status" />
+
+        <com.meilancycling.mema.ui.device.view.DeviceUpgradeView
+            android:id="@+id/duv"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="37dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sl" />
+
+        <ImageView
+            android:id="@+id/iv_ble_status"
+            android:layout_width="14dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ble_connecting"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_ble_status"
+            app:layout_constraintTop_toBottomOf="@id/duv" />
+
+        <TextView
+            android:id="@+id/tv_ble_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black_3"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ble_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_ble_status"
+            app:layout_constraintTop_toTopOf="@id/iv_ble_status" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ble_warning"
+            app:layout_constraintEnd_toStartOf="@id/tv_status"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_ble_status" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="41dp"
+            android:gravity="center_horizontal"
+            android:text="@string/equipment_upgrades_tips"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_status"
+            app:layout_constraintTop_toBottomOf="@id/iv_ble_status" />
+
+        <View
+            android:id="@+id/view_continue_bg"
+            android:layout_width="102dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/shape_blue_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duv" />
+
+        <ImageView
+            android:id="@+id/iv_continue"
+            android:layout_width="12dp"
+            android:layout_height="15dp"
+            android:src="@drawable/device_upgrade"
+            app:layout_constraintBottom_toBottomOf="@id/view_continue_bg"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="@id/view_continue_bg"
+            app:layout_constraintRight_toLeftOf="@id/tv_continue"
+            app:layout_constraintTop_toTopOf="@id/view_continue_bg" />
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/continue_upgrade"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_continue"
+            app:layout_constraintLeft_toRightOf="@id/iv_continue"
+            app:layout_constraintRight_toRightOf="@id/view_continue_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_continue" />
+
+        <TextView
+            android:id="@+id/tv_continue_tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/tip_connecting"
+            android:textColor="@color/black_6"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_continue_bg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
