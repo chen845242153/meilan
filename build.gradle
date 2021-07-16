@@ -1,0 +1,47 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3"
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                username = "mapbox"
+                password = "sk.eyJ1Ijoic29yZWxpb24iLCJhIjoiY2todmZqa3VnMTMyOTJ6b2M3Zjg0eTY2eCJ9.yOjdeQUBRIEoxgBzuOEIEA"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 29
+    androidXVersion = '1.2.0'
+    compileSdkVersion = 29
+    buildToolsVersion = '28.0.3'
+    constraint_version = '1.1.3'
+}
